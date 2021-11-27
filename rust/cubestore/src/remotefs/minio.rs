@@ -59,7 +59,7 @@ impl MINIORemoteFs {
             region: "".to_owned(),
             endpoint: minio_server_endpoint
                 .as_deref()
-                .unwrap_or("localhost:")
+                .unwrap_or("localhost:9000")
                 .to_string(),
         };
         let bucket = std::sync::RwLock::new(Bucket::new_with_path_style(
